@@ -1,126 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persona Sheets Pal</title>
-    <link rel="icon" type="image" href="Image res/Lovers.png"
-    <link rel="stylesheet" href="../styles.css">
+    <title>Personapal Quiz</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap">
-    <style>
-       body {
-    font-family: 'Comfortaa', sans-serif;
-    background-color: #f2ba00;
-    max-width: 400px;
-    font-size: 20px;
-    margin: 20px;
-    padding: 15px;
-    display: flex
-;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-       }
-        h1 {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .container {
-            width: 100%;
-            overflow-y: auto;
-            height: 600px; 
-        }
-        .trigger {
-            position: absolute; 
-            top: 30px; 
-            left: 90%; 
-            transform: translateX(-75%); 
-            padding: 20px 30px;
-            background-color: transparent;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .popup {
-            position: absolute; 
-            left: 70%; 
-            transform: translateX(-30%);
-            display: none; 
-            z-index: 999;
-            background-color: transparent;
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-        }
-        .trigger:hover + .popup {
-            display: block;
-        }
-        .popup img {
-            max-width: 200px;
-            max-height: 200px;
-        }
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-gap: 10px;
-            padding: 10px;
-        }
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        footer {
-            text-align: center;
-        }
-  
-        footer p {
-            font-size: 10px; 
-            color: #843b62;
-        }
-        p1 {
-            color: black;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        a{
-            font-size: 15px;
-            text-decoration: none;
-            color: black;
-            
-        }
-
-        a:hover {
-            color: black; /* Change to the desired color */
-        }
-
-
-    </style>
+    <link rel="icon" type="image/x-icon" href="img/iconkepala.png">
 </head>
 <body>
-    <h1>Persona Sheets</h1>
     <div class="quiz-container">
         <div class="start-page" id="start-page">
-            <div class="container">
-                <div class="image-gallery">
-                    <p1>ROMANTICAL: Love Birds, love is in the air .</p1>
-                    <img src="Image res/Lovers.png" alt="Lovers">
-                    <br>
-                    <p1>WANDERER: Always wandering and Optimistic</p1>
-                    <img src="Image res/wander.png" alt="WANDERER">
-                    <br>
-                    <p1>MYSTERIOUS: Sometimes haunts you down and eat up fries with ketchup</p1>
-                    <img src="Image res/Horror.png" alt="Horror">
-                    <br>
-                    <p1>PHILOSPHER: Think too much about history and existential things, easily get dizzy by his own head</p1>
-                    <img src="Image res/philosopher.png" alt="PHILOSPHER">
-                    <br>
+            <h1>PERSONA-PAL</h1>
+            <p>Temukan mana yang paling 'kamu' dan jadi kutu buku ala dirimu</p>
+            <img src="img/iconvending1.png" class="top-image">
+            <button id="start-button" class="start-button">Press To Start</button>
+            <a href="Info/index.html" target="_blank" rel="noopener noreferrer"><button class="start-button">Personality Sheet</button></a>
+            <!--a href="gal.html" target="_blank" rel="noopener noreferrer"><button class="start-button">Learn</button></a-->  
+            <br>
+            <p1>A fun personality quiz inspired by MBTI types, Innate Personality Traits, Cake resume, etc.</p1>
+            <p1>Made by tim New Media DKV C Palasari</p1>
+        </div>
+
+        <div class="quiz-page" id="quiz-page" style="display: none;">
+            <div id="quiz">
+                <!-- Questions with images, and choice buttons will be generated here dynamically using JavaScript -->
+            </div>
+            <div id="result" style="display: none;">
+                <p>Feel free to share your result! #CosmosPersona</p>
+                <div class="result-image">
+                    <img id="result-image" src="" alt="Result Image">
+                </div>
+                <!--p>Feedback & Enter Raffle!<a href="https://forms.gle/1SYvtZrZYcD9VtSf6" target="_blank">here</a></p-->
+                <br>
+                <p>Made by <a href="https://www.instagram.com/izonfalzo" target="_blank">@izonfalzo</a></p>
+                <!--p>Shoutout to my sis: <a href="https://www.instagram.com/avocadrawz" target="_blank">@avocadrawz</a></p-->
+                <div class="hover-container">
+                    <span class="hover-text">Give feedback <a href="https://forms.gle/1SYvtZrZYcD9VtSf6" target="_blank">here</a></span>
+                    <!--span class="tooltip">help me improve this and win prizes!</span-->
+                </div>
+                <br>
+                <a href="index.html" target="_blank" rel="noopener noreferrer"><button class="do-not-press-button">Time Machine</button></a>  
+                <a href="Info/" target="_blank" rel="noopener noreferrer"><button class="do-not-press-button">Explore More!</button></a> 
+                <a href="sub.html" target="_blank" rel="noopener noreferrer"><button class="do-not-press-button">Big Red Button</button></a> 
+                <div class="result-content">
+                    <div class="result-text">
+                        <!-- Result text and keywords will go here -->
+                    </div>
                 </div>
             </div>
+            
+            <!-- Scores container to display scores for each letter -->
+            <!--div class="scores-container">
+                <p>E Score: 0, S Score: 0, T Score: 0, P Score: 0 </p>
+                <p>I Score: 0, N Score: 0, F Score: 0, J Score: 0</p>
+            </div-->
+            
+            <!--button id="restart-button" class="restart-button" style="display: none;">Restart</button-->
+        <footer>
+            <a href="https://docs.google.com/document/d/1GKvwQOTK8jjRFDShpuLD_w9_VGU_IVxfSglJngvNWLU/edit?usp=sharing" target="_blank" style="font-size: 10px; text-decoration: none;">&copy; 2024 I-see Warisa Jaidee</a>
+        </footer>
         </div>
     </div>
-    </div>
+    <script src="finalscript.js"></script>
 </body>
 </html>
