@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Sheets Pal</title>
+    <link rel="icon" type="image" href="Image res/Lovers.png"
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap">
+    <style>
+       body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #f2ba00;
+    max-width: 400px;
+    font-size: 20px;
+    margin: 20px;
+    padding: 15px;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+       }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            overflow-y: auto;
+            height: 600px; 
+        }
+        .trigger {
+            position: absolute; 
+            top: 30px; 
+            left: 90%; 
+            transform: translateX(-75%); 
+            padding: 20px 30px;
+            background-color: transparent;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup {
+            position: absolute; 
+            left: 70%; 
+            transform: translateX(-30%);
+            display: none; 
+            z-index: 999;
+            background-color: transparent;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .trigger:hover + .popup {
+            display: block;
+        }
+        .popup img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+            padding: 10px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        footer {
+            text-align: center;
+        }
+  
+        footer p {
+            font-size: 10px; 
+            color: #843b62;
+        }
+        p1 {
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        a{
+            font-size: 15px;
+            text-decoration: none;
+            color: black;
+            
+        }
+
+        a:hover {
+            color: black; /* Change to the desired color */
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Persona Sheets</h1>
+    <div class="quiz-container">
+        <div class="start-page" id="start-page">
+            <div class="container">
+                <div class="image-gallery">
+                    <p1>ROMANTICAL: Love Birds, love is in the air .</p1>
+                    <img src="Image res/Lovers.png" alt="Lovers">
+                    <br>
+                    <p1>WANDERER: Always wandering and Optimistic</p1>
+                    <img src="Image res/wander.png" alt="WANDERER">
+                    <br>
+                    <p1>MYSTERIOUS: Sometimes haunts you down and eat up fries with ketchup</p1>
+                    <img src="Image res/Horror.png" alt="Horror">
+                    <br>
+                    <p1>PHILOSPHER: Think too much about history and existential things, easily get dizzy by his own head</p1>
+                    <img src="Image res/philosopher.png" alt="PHILOSPHER">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
